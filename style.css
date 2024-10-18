@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+}
+
+body {
+    font-family: Inter;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #FF6B82;
+    font-size: 24px;
+    font-weight: 600;
+    position: relative;
+    margin: 20px 0;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+  
+header::before,
+header::after {
+    content: "";
+    flex: 1;  /* Make the lines flexible and responsive */
+    border-top: 4px solid #e0e0e0;
+    margin: 0 5px; 
+  }
+
+.pricing-options {
+    margin-bottom: 20px;
+}
+
+.option {
+    /* for adjusting most popular */
+    /* display: grid;
+    grid-template-columns: 1.2fr 15fr;
+    justify-content: center;
+    align-items: center; */
+    position: relative; 
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    padding: 30px 15px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.option:hover{
+    border: 3px solid #FF6B82;
+}
+
+.option input[type="radio"]:hover + label,
+.option input[type="radio"]:checked + label {
+    color: #FF6B82;
+}
+input[type="radio"]{
+    accent-color: rgb(247, 76, 93);
+}
+.most-popular {
+    border: 2px solid #FF6B82;
+}
+.active{
+    border: 3px solid #FF6B82;
+}
+
+.most-popular .popular-badge {
+    position: absolute;
+    top: -10px;
+    right: 0.5rem;
+    background-color: #FF6B82;
+    color: white;
+    padding: 7px 13px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 2px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.unit-label {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.discount-badge {
+    
+    background-color: #FF6B82;
+    color: white;
+    padding: 3px 4px;
+    margin-left: 10px;
+    font-size: 15px;
+    border-radius: 2px;
+    font-weight: 400;
+}
+
+.price {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+    font-weight: 400;
+    font-size: 13px;
+    padding-top:0.4rem ;
+}
+.standard-price{
+    align-self: self-start;
+}
+.main-card{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr  15fr;
+}
+label{
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0.3rem 0.8rem; */
+}
+.sub-text {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    color: #666;
+    margin-top: 5px;
+}
+.dropdown-content {
+    display: none;
+    /* width: 12rem; */
+    padding: 0.5rem 2rem;
+  }
+.dropdown-content table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .dropdown-content th, .dropdown-content td {
+    padding: 2px;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: black;
+  }
+  .dropdown-content th{
+    padding-bottom: 0.6rem;
+  }
+  
+  .dropdown-content select {
+    width: 100%;
+    padding: 5px;
+    border: 2px solid #ddd;
+    border-radius: none;
+    font-weight: 400;
+    max-width: 6rem;
+  }
+
+.delivery-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 0px 0.3rem;
+    font-weight: 700;
+    color: #FF6B82;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    background-color: #FF6B82;
+    color: white;
+    padding: 15px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #ff3385;
+}
+
+.powered-by {
+    font-size: 12px;
+    color: #999;
+    margin-top: 10px;
+}
+
+@media screen and (max-width : 380px) {
+    .dropdown-content{
+        padding: 0.2rem , 0.1rem;
+    }
+    .option{
+        padding: 25px 8px;
+    }
+}

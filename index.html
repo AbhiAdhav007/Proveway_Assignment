@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <!-- Header Section -->
+      <header>
+        <h1>YAY! It's BOGO</h1>
+      </header>
+
+      <form id="items">
+        <!-- Pricing Options -->
+        <div class="pricing-options">
+          <!-- First Option -->
+          <div class="option" id="option1">
+            <div class="main-card">
+              <input
+                class="inputs"
+                type="radio"
+                name="units"
+                id="item1"
+                onchange="show_dropdown(1 , 20)"
+              />
+              <label for="item1">
+                <div>
+                  <div class="unit-label">
+                    1 Unit
+                    <span class="discount-badge">10% Off</span>
+                  </div>
+                  <div class="sub-text">Standard Price</div>
+                </div>
+                <div class="standard-price">
+                  <p class="price">$20.00 USD</p>
+                  <p class="original-price">$24.00 USD</p>
+                </div>
+              </label>
+            </div>
+            <div id="dropdown1" class="dropdown-content">
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Size</th>
+                    <th>Colour</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>#1</td>
+                    <td>
+                      <select id="size1">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                      </select>
+                    </td>
+                    <td>
+                      <select id="color1">
+                        <option value="" disabled selected>Colour</option>
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="red">Red</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#2</td>
+                    <td>
+                      <select id="size2">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                      </select>
+                    </td>
+                    <td>
+                      <select id="color2">
+                        <option value="" disabled selected>Colour</option>
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="red">Red</option>
+                      </select>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Second Option with "Most Popular" Label -->
+          <div class="option most-popular" id="option2">
+            <div class="main-card">
+              <input
+                class="inputs"
+                type="radio"
+                name="units"
+                id="item2"
+                onchange="show_dropdown(2,18)"
+                checked
+              />
+              <label for="item2">
+                <div>
+                  <div class="unit-label">
+                    2 Unit
+                    <span class="discount-badge">20% Off</span>
+                  </div>
+                  <div class="sub-text">Standard Price</div>
+                </div>
+                <div class="standard-price">
+                  <p class="price">$18.00 USD</p>
+                  <p class="original-price">$24.00 USD</p>
+                </div>
+              </label>
+            </div>
+            <div id="dropdown2" class="dropdown-content" style="display: block">
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Size</th>
+                    <th>Colour</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>#1</td>
+                    <td>
+                      <select id="size1">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                      </select>
+                    </td>
+                    <td>
+                      <select id="color1">
+                        <option value="" disabled selected>Colour</option>
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="red">Red</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#2</td>
+                    <td>
+                      <select id="size2">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                      </select>
+                    </td>
+                    <td>
+                      <select id="color2">
+                        <option value="" disabled selected>Colour</option>
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="red">Red</option>
+                      </select>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="popular-badge">MOST POPULAR</div>
+          </div>
+
+          <!-- Third Option -->
+          <div class="option" id="option3">
+            <div class="main-card">
+              <input
+                class="inputs"
+                type="radio"
+                name="units"
+                id="item3"
+                onchange="show_dropdown(3 , 10)"
+              />
+              <label for="item3">
+                <div>
+                  <div class="unit-label">
+                    3 Unit
+                    <span class="discount-badge">30% Off</span>
+                  </div>
+                  <div class="sub-text">Standard Price</div>
+                </div>
+                <div class="standard-price">
+                  <p class="price">$10.00 USD</p>
+                  <p class="original-price">$24.00 USD</p>
+                </div>
+              </label>
+            </div>
+            <div id="dropdown3" class="dropdown-content">
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Size</th>
+                    <th>Colour</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>#1</td>
+                    <td>
+                      <select id="size1">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                      </select>
+                    </td>
+                    <td>
+                      <select id="color1">
+                        <option value="" disabled selected>Colour</option>
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="red">Red</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#2</td>
+                    <td>
+                      <select id="size2">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                      </select>
+                    </td>
+                    <td>
+                      <select id="color2">
+                        <option value="" disabled selected>Colour</option>
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="red">Red</option>
+                      </select>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Free Delivery and Total -->
+        <div class="delivery-info">
+          <p>Free Delivery</p>
+          <p class="total">Total: $18.00 USD</p>
+        </div>
+
+        <!-- Add to Cart Button -->
+        <button class="add-to-cart-btn" onclick="add_to_cart()">+ Add to Cart</button>
+      </form>
+
+      <!-- Powered by Text -->
+      <p class="powered-by">@ Powered by Pumper</p>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
